@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { companyDropdown } from "../../data/NavItems"
+import { DropdownType } from '../../interface'
 import styled from 'styled-components'
 const Section = styled.section`
 .services-submenu{
@@ -7,7 +8,7 @@ const Section = styled.section`
     position:absolute;
     list-style:none;
     text-align:left;
-    top:58px;
+    top:86px;
     li{
         background:grey;
         cursor: pointer;
@@ -15,7 +16,6 @@ const Section = styled.section`
     .submenu-item{
         display:block;
         width:100%;
-        height:100%;
         color:#fff;
         padding:12px;
         font-size:14px;
@@ -29,12 +29,12 @@ const Section = styled.section`
          display:none
  }
 `
-export const Dropdown = () => {
+export const Dropdown = ({ data }: DropdownType) => {
     const [dropdown, setDropdown] = useState(false)
     return (
         <Section>
             <ul className={dropdown ? 'services-submenu clicked' : 'services-submenu'} onClick={() => setDropdown(!dropdown)}>
-                {companyDropdown.map(item => (
+                {data.map(item => (
                     <li key={item.id} className={item.cName}>{item.title}</li>
                 ))}
             </ul>

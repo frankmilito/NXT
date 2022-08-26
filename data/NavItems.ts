@@ -41,12 +41,12 @@ export const companyDropdown = [
         cName: "submenu-item",
     },
     {
-        id: 2,
+        id: 3,
         title: "Teams",
         cName: "submenu-item",
     },
     {
-        id: 2,
+        id: 4,
         title: "Culture",
         cName: "submenu-item",
     },

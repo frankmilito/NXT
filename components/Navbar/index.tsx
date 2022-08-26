@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styled from 'styled-components'
-import { navItems } from '../../data/NavItems'
+import { companyDropdown, investmentDropdown, navItems } from '../../data/NavItems'
 import { Dropdown } from './Dropdown'
 
 
@@ -19,8 +19,10 @@ font-size:20px;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    text-align:center;
     width:100%;
     .nav-item{
+        height:100%;
         list-style-type:none;
         cursor:pointer;
         transition:color 300ms ease-in-out;
@@ -68,11 +70,19 @@ font-size:20px;
         transform: scaleX(1);
         }
 }
+.dropdown{
+    height:10vh;
+    display:grid;
+    place-content:center;
+}
 
 /* justify-content:space-between; */
 `
+
+
 const Navbar = () => {
     const [dropdown, setShowDropdown] = useState(false)
+    const [activeTab, setActiveTab] = useState('')
     return (
         <>
             <Nav>
@@ -83,9 +93,21 @@ const Navbar = () => {
                     {navItems.map(item => {
                         if (item.title === 'Company') {
                             return (
-                                <div style={{ position: 'relative' }}>
-                                    <li className={item.cName} key={item.id}>{item.title} {item.dropdown && <img src={item.dropdown} />}</li>
-                                    <Dropdown />
+                                <div onMouseEnter={() => setActiveTab('tab1')} onMouseLeave={() => setActiveTab('')} className='dropdown' style={{ height: '10vh', display: 'grid', placeContent: 'center' }}>
+                                    <li className={item.cName} key={item.id} >{item.title} {item.dropdown && <img src={item.dropdown} />}
+
+                                        {activeTab == 'tab1' && <Dropdown data={companyDropdown} />}
+                                    </li>
+
+                                </div>
+                            )
+                        }
+                        else if (item.title === 'Investments') {
+                            return (
+                                <div onMouseEnter={() => setActiveTab('tab2')} onMouseLeave={() => setActiveTab('')} className='dropdown' style={{ height: '10vh', display: 'grid', placeContent: 'center' }}>
+                                    <li className={item.cName} key={item.id} >{item.title} {item.dropdown && <img src={item.dropdown} />}
+                                        {activeTab == 'tab2' && <Dropdown data={investmentDropdown} />}
+                                    </li>
 
                                 </div>
                             )
@@ -96,6 +118,7 @@ const Navbar = () => {
                     })}
                     <button className="btn1">Speak with us</button>
                 </ul>
+                <div>close</div>
             </Nav>
         </>
     )
