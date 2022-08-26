@@ -2,8 +2,9 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import styled from 'styled-components'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar/'
 const Section = styled.section`
+width:100vw;
 padding:0;
 
 `
