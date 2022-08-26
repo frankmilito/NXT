@@ -3,10 +3,43 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: "airbnb-cereal-font";
+  src: url("../fonts/airbnb-cereal-font/AirbnbCereal_W_Md.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "airbnb-cereal-font";
+  src: url("../fonts/airbnb-cereal-font/AirbnbCereal_W_Bd.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "airbnb-cereal-font";
+  src: url("../fonts/airbnb-cereal-font/AirbnbCereal_W_Blk.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "airbnb-cereal-font";
+  src: url("../fonts/airbnb-cereal-font/AirbnbCereal_W_XBd.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "airbnb-cereal-font";
+  src: url("../fonts/airbnb-cereal-font/AirbnbCereal_W_Lt.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "airbnb-cereal-font", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
 }
