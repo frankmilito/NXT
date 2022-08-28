@@ -118,7 +118,6 @@ const Navbar = () => {
                     })}
                     <button className="btn1">Speak with us</button>
                 </ul>
-                <div>close</div>
             </Nav>
         </>
     )

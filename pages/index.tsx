@@ -3,6 +3,9 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import styled from 'styled-components'
 import Navbar from '../components/Navbar/'
+import Hero from '../components/HeroSection'
+import WhoWeAre from '../components/About/WhoWeAre'
+import OurBigPicture from '../components/About/OurBigPicture'
 const Section = styled.section`
 width:100vw;
 padding:0;
@@ -17,7 +20,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-
+      <Hero />
+      <WhoWeAre />
+      <OurBigPicture />
     </Section>
   )
 }
