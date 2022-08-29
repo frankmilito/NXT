@@ -2,9 +2,12 @@
 import styled from 'styled-components'
 
 const Section = styled.section`
+position:relative;
     display:grid;
     grid-template-columns:1fr 1.2fr;
     padding:2em 4em;
+    margin-bottom:6em;
+
     color:#0A014F;
     .left{
         display:grid;

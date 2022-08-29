@@ -6,6 +6,11 @@ import Navbar from '../components/Navbar/'
 import Hero from '../components/HeroSection'
 import WhoWeAre from '../components/About/WhoWeAre'
 import OurBigPicture from '../components/About/OurBigPicture'
+import OurPartners from '../components/About/OurPartners'
+import React from 'react'
+import SisterCompanies from '../components/About/SisterCompanies'
+import Social from '../components/About/Social'
+import LatestNews from '../components/About/LatestNews'
 const Section = styled.section`
 width:100vw;
 padding:0;
@@ -23,6 +28,10 @@ const Home: NextPage = () => {
       <Hero />
       <WhoWeAre />
       <OurBigPicture />
+      <OurPartners />
+      <SisterCompanies />
+      <Social />
+      <LatestNews />
     </Section>
   )
 }
