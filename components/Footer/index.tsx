@@ -20,6 +20,24 @@ const Footer = () => {
                         <img src="./images/social3.svg" alt="" />
                     </div>
                 </div>
+                <div className="items">
+                    <h5>Investments</h5>
+                    <p>PISI Integrated Services</p>
+                    <p>HelloBudgie Nigeria</p>
+                    <p>ValuePlus</p>
+                    <p>Betacare</p>
+                </div>
+                <div className="items">
+                    <h5>Company</h5>
+                    <p>About</p>
+                    <p>Values</p>
+                </div>
+                <div className="items">
+                    <h5>Support</h5>
+                    <p>+2348753697789</p>
+                    <p>info@nxt.ng</p>
+                    <p>hello@nxt.ng</p>
+                </div>
             </div>
         </FooterSection>
     )

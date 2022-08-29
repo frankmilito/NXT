@@ -11,6 +11,7 @@ import React from 'react'
 import SisterCompanies from '../components/About/SisterCompanies'
 import Social from '../components/About/Social'
 import LatestNews from '../components/About/LatestNews'
+import Footer from '../components/Footer'
 const Section = styled.section`
 width:100vw;
 padding:0;
@@ -32,6 +33,7 @@ const Home: NextPage = () => {
       <SisterCompanies />
       <Social />
       <LatestNews />
+      <Footer />
     </Section>
   )
 }
