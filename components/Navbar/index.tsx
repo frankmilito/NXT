@@ -3,15 +3,19 @@ import styled from 'styled-components'
 import { companyDropdown, investmentDropdown, navItems } from '../../data/NavItems'
 import { Dropdown } from './Dropdown'
 
-
-const Nav = styled.nav`
+type NavbarProps = {
+    state: boolean
+}
+const Nav = styled.nav<NavbarProps>`
+/* display: ${({ state }) => (state ? "none" : "block")}; */
+display:block;
 height:10vh;
 display:flex;
 align-items:center;
 width:100vw;
-background-color:black;
 color:#fff;
 font-size:20px;
+padding:0 5em;
 .nav-items{
     svg{
         fill:red
@@ -25,7 +29,8 @@ font-size:20px;
         height:100%;
         list-style-type:none;
         cursor:pointer;
-        transition:color 300ms ease-in-out;
+        transition:color 200ms ease-in-out;
+        color:#000;
         :hover{
            color: #3EC5F0
         }
@@ -46,11 +51,12 @@ font-size:20px;
         margin: 0;
         font-weight: bold;
         z-index: 1;
+        border:1px solid #3EC5F0;
         transition: color 200ms ease-in-out;
-        }
+    }
     .btn1:hover {
         color: #fff;
-        }
+    }
     .btn1::before {
         content: "";
         display: block;
@@ -75,17 +81,31 @@ font-size:20px;
     display:grid;
     place-content:center;
 }
-
+ @media screen  and (max-width: 768px){
+    display:none
+ }
 /* justify-content:space-between; */
+`
+const ResponsiveNav = styled.nav`
+display:none;
+ @media screen  and (max-width: 768px){
+    display:block;
+    padding:2em;
+    .nav{
+        display:flex;
+        justify-content:space-between;
+    }
+ }
 `
 
 
 const Navbar = () => {
-    const [dropdown, setShowDropdown] = useState(false)
+    const [navbarState, setNavbarState] = useState(false)
     const [activeTab, setActiveTab] = useState('')
+    console.log(window.innerWidth)
     return (
         <>
-            <Nav>
+            <Nav state={navbarState} className={!navbarState ? 'show' : ''}>
                 <ul className='nav-items'>
                     <div className="navbar-logo">
                         <img src="./images/logo.svg" alt="" />
@@ -119,6 +139,12 @@ const Navbar = () => {
                     <button className="btn1">Speak with us</button>
                 </ul>
             </Nav>
+            <ResponsiveNav>
+                <div className="nav">
+                    <img src="./images/logo.svg" alt="" />
+                    <img src="./images/hamburger.svg" alt="" style={{ width: '80px' }} />
+                </div>
+            </ResponsiveNav>
         </>
     )
 }

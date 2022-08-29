@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const PartnersSection = styled.section`
-padding:0 5em;
+padding:2em 5em;
 h3{
     text-align: center;
     font-size:26px;
@@ -11,6 +11,13 @@ h3{
    .logos{
     display:flex;
     justify-content:space-between;
+   }
+   img{
+       opacity:0.2;
+       transition:opacity 300ms ease-in-out;
+       :hover{
+           opacity:1
+       }
    }
 `
 
