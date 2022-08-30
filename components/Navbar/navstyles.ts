@@ -108,11 +108,13 @@ display:none;
         display: ${({ state }) => (!state ? "none" : "block")};
         bottom: 0;
         height:100vh;
+        padding-top:2em;
         li{
             list-style:none;
             text-align:center;
-            padding:5px 0;
+            padding:10px 0;
             margin:5px 0;
+            font-size:1.5rem;
             :hover{
                 background-color:#3EC5F0;
                 color:white;
