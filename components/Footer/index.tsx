@@ -51,6 +51,10 @@ const FooterSection = styled.section`
         p{
             margin-bottom:.4rem;
             cursor: pointer;
+            transition: color 0.2s ease-in-out;
+            :hover{
+                color:#3EC5F0;
+            }
         }
         .socialIcons{
             margin-top:2rem;

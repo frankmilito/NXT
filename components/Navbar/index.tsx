@@ -18,7 +18,7 @@ const Navbar = () => {
                     {navItems.map(item => {
                         if (item.title === 'Company') {
                             return (
-                                <div onMouseEnter={() => setActiveTab('tab1')} onMouseLeave={() => setActiveTab('')} className='dropdown' style={{ height: '10vh', display: 'grid', placeContent: 'center' }}>
+                                <div key={item.id} onMouseEnter={() => setActiveTab('tab1')} onMouseLeave={() => setActiveTab('')} className='dropdown' style={{ height: '10vh', display: 'grid', placeContent: 'center' }}>
                                     <li className={item.cName} key={item.id} >{item.title} {item.dropdown && <img src={item.dropdown} />}
 
                                         {activeTab == 'tab1' && <Dropdown data={companyDropdown} />}
@@ -29,7 +29,7 @@ const Navbar = () => {
                         }
                         else if (item.title === 'Investments') {
                             return (
-                                <div onMouseEnter={() => setActiveTab('tab2')} onMouseLeave={() => setActiveTab('')} className='dropdown' style={{ height: '10vh', display: 'grid', placeContent: 'center' }}>
+                                <div key={item.id} onMouseEnter={() => setActiveTab('tab2')} onMouseLeave={() => setActiveTab('')} className='dropdown' style={{ height: '10vh', display: 'grid', placeContent: 'center' }}>
                                     <li className={item.cName} key={item.id} >{item.title} {item.dropdown && <img src={item.dropdown} />}
                                         {activeTab == 'tab2' && <Dropdown data={investmentDropdown} />}
                                     </li>
