@@ -21,6 +21,16 @@ const SocialSection = styled.section`
             font-size:28px;
             color:#3EC5F0
         }
+        .logo{
+            width:100%;
+        }
+    }
+    @media screen  and (max-width:1100px){
+        
+         h2{
+            font-size:38px !important;
+            margin-bottom:2.5rem;
+        }
     }
     @media screen  and (max-width:768px){
         margin:4em 0 ;

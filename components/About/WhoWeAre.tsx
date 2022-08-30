@@ -49,7 +49,10 @@ const Section = styled.section`
     font-weight: 500;
     padding: 1.5rem 3rem;
     }
-    @media screen and (max-width: 768px){
+    @media screen  and (max-width: 1100px){
+grid-template-columns:1.4fr 1fr;
+    }
+    @media screen and (max-width: 868px){
     grid-template-columns:1fr;
     padding:1em 2em;
     margin-bottom:3em;
@@ -58,6 +61,8 @@ const Section = styled.section`
         display:flex;
         align-items: center;
         gap:2em;
+        justify-content: center;
+
     }
     .right{
         margin-top:1em;

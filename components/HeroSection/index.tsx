@@ -9,6 +9,9 @@ const HeroSection = styled.section`
     flex-direction: column;
     padding:0 4em;
     margin-bottom:10em;
+    img{
+        width:100%;
+    }
     h1{
         font-size:5em;
         font-weight:bold;
