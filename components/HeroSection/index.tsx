@@ -9,6 +9,7 @@ const HeroSection = styled.section`
     flex-direction: column;
     padding:0 4em;
     margin-bottom:10em;
+    margin-top:5em;
     img{
         width:100%;
     }

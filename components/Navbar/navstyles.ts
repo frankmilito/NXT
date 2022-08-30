@@ -4,6 +4,9 @@ type NavbarProps = {
     state: boolean
 }
 export const Nav = styled.nav`
+position:fixed;
+background:#fff;
+z-index:10;
 display:block;
 height:10vh;
 display:flex;
@@ -12,6 +15,7 @@ min-width:100vw;
 color:#fff;
 font-size:20px;
 padding:0 5em;
+top:0;
 .nav-items{
     min-width:800px;
     svg{
@@ -84,8 +88,13 @@ padding:0 5em;
 export const ResponsiveNav = styled.nav<NavbarProps>`
 display:none;
  @media screen  and (max-width: 768px){
+    position:fixed;
+    background:#fff;
+    z-index:20;
     display:block;
-    padding:2em;
+    padding:1em 2em ;
+    width:100%;
+    top:0;
     .nav{
         display:flex;
         justify-content:space-between;
@@ -102,7 +111,7 @@ display:none;
         z-index:2;
         background-color:white;
         width:100%;
-        top:6em;
+        top:5em;
         right: ${({ state }) => (state ? "0" : "-100%")};
         display: ${({ state }) => (!state ? "none" : "block")};
         bottom: 0;
@@ -113,7 +122,7 @@ display:none;
             text-align:center;
             padding:10px 0;
             margin:5px 0;
-            font-size:1.5rem;
+            font-size:1.2rem;
             :hover{
                 background-color:#3EC5F0;
                 color:white;
