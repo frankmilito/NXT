@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import CountUp from "react-countup";
 
 const HeroSection = styled.section`
     display:flex;
@@ -46,6 +47,51 @@ const HeroSection = styled.section`
             font-size:2em
         }
     }
+     @media screen  and (max-width: 768px){
+    padding:0 2em;
+    margin-bottom:4em;
+    h1{
+        font-size:2em;
+        margin-top:1em;
+        margin-bottom:.3em
+    }
+     .hero-section{
+        width:100%;
+        text-align: center;
+        margin-bottom: 2em;
+        .subtitle{
+            font-size:1.1em;
+        text-align: justify;
+
+        }
+    }
+    img{
+        max-width:100%;
+    }
+      .group_analysis{
+        width:100%;
+        margin:2em auto;
+         display:grid;
+        grid-template-columns:repeat(2,1fr);
+        h2{
+            font-size:1em;
+            text-align:center;
+            margin-bottom:1rem;
+
+        }
+        p{
+            font-size:15px;
+            text-align:center;
+
+        }
+    }
+ }
+ @media screen  and (max-width:450px){
+      .group_analysis{
+        grid-template-columns:repeat(1,1fr);
+        gap:1em;
+    }
+ }
 `
 const Hero = () => {
     return (
@@ -62,19 +108,19 @@ const Hero = () => {
             </div>
             <div className='group_analysis'>
                 <div>
-                    <h2>10,000</h2>
+                    <h2><CountUp end={10000} duration={9} /></h2>
                     <p>Customers around Africa</p>
                 </div>
                 <div>
-                    <h2>60 +</h2>
+                    <h2><CountUp end={60} duration={6} /> +</h2>
                     <p>Employees in Nigeria</p>
                 </div>
                 <div>
-                    <h2>20 </h2>
+                    <h2><CountUp end={20} duration={5} /> </h2>
                     <p>Partners in Africa</p>
                 </div>
                 <div>
-                    <h2> 4</h2>
+                    <h2> <CountUp end={4} duration={4} /></h2>
                     <p>Investment in Africa</p>
                 </div>
             </div>

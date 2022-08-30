@@ -73,6 +73,67 @@ background-color:#EDF6F9;
     border-bottom-left-radius: 50rem;
     bottom: 0;
     }
+
+    @media screen  and (max-width:768px){
+         .left,.right{
+    display:grid;
+    grid-template-columns:1fr;
+    flex-direction:column
+  }
+  .right{
+      position:relative;
+      height:40rem;
+      width:100%;
+        display:flex;
+        place-content:center;
+        flex-direction:column;
+      background:#0A014F;
+      padding:0 2em;
+      .rightContent{
+        color:white;
+        position: static;
+        transform: translate(0);
+        max-width:100%;
+       text-align:justify;
+
+        h2 {
+        font-size:2.2rem;
+        margin-bottom:1.5rem;
+      }
+      p{
+          font-size:1rem;
+          line-height:2rem;
+      }
+
+      }
+  }
+  .left{
+      position:relative;
+      height:40rem;
+      padding:4em 0;
+      .leftContent{
+        display:flex;
+        place-content:center;
+        flex-direction:column;
+       padding:2em;
+       text-align:justify;
+      }
+      h2{
+          font-size:2.5rem;
+          margin-bottom:1.5rem;
+      }
+      p{
+          font-size:1.2rem;
+          line-height:2rem;
+      }
+  }
+    .images{
+    display: none;
+    }
+    .images1{
+    display: none;
+    }
+    }
 `
 
 const OurBigPicture = () => {

@@ -2,12 +2,11 @@
 import styled from 'styled-components'
 
 const Section = styled.section`
-position:relative;
+    position:relative;
     display:grid;
     grid-template-columns:1fr 1.2fr;
     padding:2em 4em;
     margin-bottom:6em;
-
     color:#0A014F;
     .left{
         display:grid;
@@ -31,7 +30,7 @@ position:relative;
         font-size:1.2em;
         color:#373435;
         line-height:1.8em;
-        margin-bottom:1em
+        margin-bottom:1em;
     }
     img{
         max-width:100%;
@@ -49,7 +48,60 @@ position:relative;
     font-size: 1rem;
     font-weight: 500;
     padding: 1.5rem 3rem;
-    
+    }
+    @media screen and (max-width: 768px){
+    grid-template-columns:1fr;
+    padding:1em 2em;
+    margin-bottom:3em;
+    }
+     .left{
+        display:flex;
+        align-items: center;
+        gap:2em;
+    }
+    .right{
+        margin-top:1em;
+        width:100%;
+    }
+    img{
+      height:80%;
+    }
+        .image1{
+        margin-top:0;
+    }
+      .right{
+        margin-top:2em;
+        width:100%;
+    }
+    .title{
+        font-size:1.5em;
+        line-height:2em;
+        text-align:center;
+        width:100%;
+        display:block;
+    }
+    .subtitle{
+        font-size:1.5em;
+        text-align:justify;
+    }
+    .content{
+        font-size:1em;
+        line-height:1.8em;
+        margin-bottom:1em;
+        text-align:justify;
+
+    }
+    .btn{
+        width:100%;
+    }
+    @media screen  and (max-width: 450px){
+        img{
+            width:100%;
+        }
+     .left{
+         flex-direction:column;
+     }
+    }
 `
 const WhoWeAre = () => {
     return (

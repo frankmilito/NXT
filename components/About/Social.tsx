@@ -22,6 +22,33 @@ const SocialSection = styled.section`
             color:#3EC5F0
         }
     }
+    @media screen  and (max-width:768px){
+        margin:4em 0 ;
+        .wrapper{ 
+        width:100%;
+        display:grid;
+        gap:3rem;
+        grid-template-columns:repeat(1,1fr);
+        padding:0 1em;
+        h2{
+            font-size:24px;
+            margin-bottom:2rem;
+            text-align:center;
+        }
+        p{
+            font-size:16px;
+            line-height:25px;
+            margin-bottom:1.5rem;
+        }
+        a{
+            font-size:20px;
+            color:#3EC5F0
+        }
+        .logo{
+            max-width:100%;
+        }
+        }
+    }
 `
 const Social = () => {
     return (

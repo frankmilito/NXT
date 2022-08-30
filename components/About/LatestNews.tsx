@@ -51,6 +51,37 @@ const LatestNewsSection = styled.section`
         }
     }
     }
+    @media screen  and (max-width:768px){
+    padding:2em 0;
+    .wrapper{ width:100%;
+        padding:2em;
+    .header{
+        margin-bottom:1.5rem;
+        h3{
+            font-size:1.5rem;
+        }
+         a{
+            font-size:20px;
+        }
+    }
+    .cards{
+        grid-template-columns:repeat(1,1fr);
+        gap:2rem;
+        margin:2em 0;
+        .card{
+            border-bottom-right-radius:12px;
+            border-bottom-left-radius:12px;
+            overflow:hidden;
+            p{
+                font-size:16px;
+            }
+             a{
+            font-size:16px;
+        }
+        }
+    }
+    }
+    }
 `
 
 const LatestNews = () => {

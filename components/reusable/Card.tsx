@@ -1,38 +1,81 @@
 import styled from 'styled-components'
 
 const CardSection = styled.section`
- h4 {
+
+     .card{
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        border-radius:12px;
+    }
+    .cardContent{
+        padding: 2rem;
+        background-color:#0A014F;
+        color:#FFFFFF;
+         border-bottom-right-radius:12px;
+        border-bottom-left-radius:12px;
+    }
+    .cardContent1{
+        padding: 2rem;
+        background-color:#197BBD;
+        color:#FFFFFF;
+        border-bottom-right-radius:12px;
+        border-bottom-left-radius:12px;
+    }
+    .image{
+        overflow: hidden;
+    }
+    h4 {
       font-size: 1.8rem;
-      margin: 1rem 0;
+      /* margin: 1rem 0; */
     }
     p {
       text-align: justify;
     }
+
+    .link{
+      margin-top: 2rem;
+      cursor: pointer;
+    padding-bottom:2rem;
+
+    }
+    .nxtImage1,.nxtImage2{
+        max-width:100%;
+        transition: all 300ms ease-in-out;
+        border-top-right-radius:12px;
+        border-top-left-radius:12px;
+        :hover{
+            transform:scale(1.1)
+        }
+    }
+    @media screen  and (max-width:768px){
+         h4 {
+      font-size: 1.4rem;
+      margin-bottom:1em;
+    }
+      p {
+      font-size: 14px;
+      line-height:1.5em
+    }
+    }
 `
-export const Cards = () => {
+type CardProps = {
+    image: string
+    content: string
+    title: string
+}
+export const Cards = ({ title, content, image }: CardProps) => {
 
     return (
         <CardSection className="card">
             <div className="image">
-                <img src="./images/nxt1.svg" alt="" className="nxtImage1" />
+                <img src={image} alt="" className="nxtImage1" />
             </div>
             <div className="cardContent" >
-                <h4>NXT Trade</h4>
+                <h4>{title}</h4>
                 <p>
-                    NXT Trade is a Tier 1 distributor involved in extensive
-                    procurement for big corporations and government agencies. As a
-                    result of NXT Trade, it is simpler for brands to get in touch
-                    with the retailers they want to work with and interact with
-                    their target market. They expertly deliver a product from the
-                    manufacturing right up to the customer's front door. It started
-                    in Lagos, Nigeria, and has since expanded to several Anglophone
-                    African nations. The first branch is located at Lekki Phase 1.
-                    NXT Trade collaborates with Shoprite, Spar, Lafarge, Transcorp
-                    Hilton, Hartley's, and numerous more brands to achieve this
-                    purpose.
+                    {content}
                 </p>
 
-                <small>Visit our website &#62;</small>
+                <p className='link'>Visit our website &#62;</p>
             </div>
         </CardSection>
     )

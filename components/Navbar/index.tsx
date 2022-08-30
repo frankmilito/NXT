@@ -102,7 +102,6 @@ display:none;
 const Navbar = () => {
     const [navbarState, setNavbarState] = useState(false)
     const [activeTab, setActiveTab] = useState('')
-    console.log(window.innerWidth)
     return (
         <>
             <Nav state={navbarState} className={!navbarState ? 'show' : ''}>
@@ -142,7 +141,7 @@ const Navbar = () => {
             <ResponsiveNav>
                 <div className="nav">
                     <img src="./images/logo.svg" alt="" />
-                    <img src="./images/hamburger.svg" alt="" style={{ width: '80px' }} />
+                    <img src="./images/hamburger.svg" alt="" style={{ width: '50px' }} />
                 </div>
             </ResponsiveNav>
         </>

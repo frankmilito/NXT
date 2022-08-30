@@ -19,6 +19,17 @@ h3{
            opacity:1
        }
    }
+   @media screen  and (max-width: 768px){
+      .logos{
+       display:grid;
+       grid-template-columns:1fr 1fr 1fr;
+       gap:2em;
+       place-content:center;
+      }
+   }
+   @media screen and (max-width: 450px){
+
+   }
 `
 
 const OurPartners = () => {
