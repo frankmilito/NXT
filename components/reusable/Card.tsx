@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { CardProps } from '../../interface'
 
 const CardSection = styled.section`
 
@@ -58,11 +59,7 @@ const CardSection = styled.section`
     }
     }
 `
-type CardProps = {
-    image: string
-    content: string
-    title: string
-}
+
 export const Cards = ({ title, content, image }: CardProps) => {
 
     return (
