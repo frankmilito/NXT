@@ -87,7 +87,7 @@ grid-template-columns:1.4fr 1fr;
     }
     .subtitle{
         font-size:1.5em;
-        text-align:justify;
+        text-align:center;
     }
     .content{
         font-size:1em;

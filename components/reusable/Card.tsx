@@ -39,6 +39,7 @@ const CardSection = styled.section`
     }
     .nxtImage1,.nxtImage2{
         max-width:100%;
+        width:100%;
         transition: all 300ms ease-in-out;
         border-top-right-radius:12px;
         border-top-left-radius:12px;

@@ -4,6 +4,10 @@ import { Cards } from "../reusable/Card"
 const SisterComponents = styled.section`
   background: #f1f5f9;
   padding: 3rem 0;
+  .wrapper {
+    width: 80%;
+    margin: 3em auto;
+  }
   h1 {
     text-align: center;
     padding: 1rem 0 3rem;

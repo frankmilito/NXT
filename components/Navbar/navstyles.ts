@@ -95,18 +95,19 @@ display:none;
         position:relative;
        /* display: ${({ state }) => (state ? "block" : "none")}; */
     }
-    .show{
+    /* .show{
         display:none;
-    }
+    } */
     ul{
         position:absolute;
         z-index:2;
         background-color:white;
         width:100%;
-        top:0;
-        /* right: ${({ state }) => (state ? "100%" : "-100%")}; */
+        top:6em;
+        right: ${({ state }) => (state ? "0" : "-100%")};
+        display: ${({ state }) => (!state ? "none" : "block")};
         bottom: 0;
-        height:180px;
+        height:100vh;
         li{
             list-style:none;
             text-align:center;

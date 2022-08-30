@@ -47,12 +47,13 @@ const Navbar = () => {
             <ResponsiveNav state={navbarState}>
                 <div className="nav">
                     <img src="./images/logo.svg" alt="" />
-                    <img src="./images/hamburger.svg" alt="" style={{ width: '30px' }} onClick={() => {
+                    <img src="./images/hamburger.svg" alt="" style={{ width: '30px', zIndex: 10 }} onClick={() => {
                         console.log(navbarState)
                         setNavbarState(!navbarState)
                     }} />
                 </div>
-                <nav className={navbarState ? 'nav-mobile' : 'show'}>
+                <nav >
+                    {/* <nav className={navbarState ? 'nav-mobile' : 'show'}> */}
                     <ul >
                         {navItems.map(item => (
                             <li key={item.id}>{item.title}</li>

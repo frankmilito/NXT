@@ -74,7 +74,19 @@ background-color:#EDF6F9;
     border-bottom-left-radius: 50rem;
     bottom: 0;
     }
+@media screen  and (max-width:1100px){
+      .left{
+      position:relative;
+      height:40rem;
+      padding:4em 0;
+      .leftContent{
+       padding:2em;
+       text-align:justify;
+       width:30rem
 
+      }
+  }
+}
     @media screen  and (max-width:768px){
          .left,.right{
     display:grid;
