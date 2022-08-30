@@ -2,90 +2,15 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import { companyDropdown, investmentDropdown, navItems } from '../../data/NavItems'
 import { Dropdown } from './Dropdown'
-
-
-const Nav = styled.nav`
-height:10vh;
-display:flex;
-align-items:center;
-width:100vw;
-background-color:black;
-color:#fff;
-font-size:20px;
-.nav-items{
-    svg{
-        fill:red
-    };
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    text-align:center;
-    width:100%;
-    .nav-item{
-        height:100%;
-        list-style-type:none;
-        cursor:pointer;
-        transition:color 300ms ease-in-out;
-        :hover{
-           color: #3EC5F0
-        }
-    };
-    
-    .btn1 {
-        padding: 30px 38px;
-        background: #fff;
-        color:#3EC5F0;
-        cursor: pointer;
-        font-size: 16px;
-        border-radius: 12px;
-        letter-spacing: 1px;
-        line-height: 0;
-        position: relative;
-        border: 0;
-        overflow: hidden;
-        margin: 0;
-        font-weight: bold;
-        z-index: 1;
-        transition: color 200ms ease-in-out;
-        }
-    .btn1:hover {
-        color: #fff;
-        }
-    .btn1::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: #3EC5F0;;
-        transform: scaleX(0);
-        z-index: -1;
-        transition: transform 500ms ease-in-out;
-        transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
-        transform-origin: left;
-        }
-    .btn1:hover::before {
-        transform: scaleX(1);
-        }
-}
-.dropdown{
-    height:10vh;
-    display:grid;
-    place-content:center;
-}
-
-/* justify-content:space-between; */
-`
+import { Nav, ResponsiveNav } from './navstyles'
 
 
 const Navbar = () => {
-    const [dropdown, setShowDropdown] = useState(false)
+    const [navbarState, setNavbarState] = useState(false)
     const [activeTab, setActiveTab] = useState('')
     return (
         <>
-            <Nav>
+            <Nav >
                 <ul className='nav-items'>
                     <div className="navbar-logo">
                         <img src="./images/logo.svg" alt="" />
@@ -118,8 +43,24 @@ const Navbar = () => {
                     })}
                     <button className="btn1">Speak with us</button>
                 </ul>
-                <div>close</div>
             </Nav>
+            <ResponsiveNav state={navbarState}>
+                <div className="nav">
+                    <img src="./images/logo.svg" alt="" />
+                    <img src="./images/hamburger.svg" alt="" style={{ width: '30px', zIndex: 10 }} onClick={() => {
+                        console.log(navbarState)
+                        setNavbarState(!navbarState)
+                    }} />
+                </div>
+                <nav >
+                    {/* <nav className={navbarState ? 'nav-mobile' : 'show'}> */}
+                    <ul >
+                        {navItems.map(item => (
+                            <li key={item.id}>{item.title}</li>
+                        ))}
+                    </ul>
+                </nav>
+            </ResponsiveNav>
         </>
     )
 }

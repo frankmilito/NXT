@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { companyDropdown } from "../../data/NavItems"
 import { DropdownType } from '../../interface'
 import styled from 'styled-components'
 const Section = styled.section`
@@ -8,7 +7,7 @@ const Section = styled.section`
     position:absolute;
     list-style:none;
     text-align:left;
-    top:86px;
+    top:85px;
     li{
         background:grey;
         cursor: pointer;

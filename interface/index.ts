@@ -7,3 +7,9 @@ export type DropDownItems = {
 export type DropdownType = {
     data: DropDownItems[]
 }
+
+export type CardProps = {
+    image: string
+    content: string
+    title: string
+}
