@@ -93,8 +93,8 @@ const LatestNews = () => {
                     <a href="#">View all</a>
                 </div>
                 <div className="cards">
-                    {[1, 2, 3].map(item => (
-                        <div className="card">
+                    {[1, 2, 3].map((item, i) => (
+                        <div key={i} className="card">
                             <div className="image">
                                 <img src="./images/news.svg" alt="" className="image" />
                                 <div className="cardContent"><p>How to send money to Nigeria</p>
