@@ -155,6 +155,8 @@ background-color:#EDF6F9;
       .leftContent{
        padding:2em;
        text-align:justify;
+      width:100%;
+
 
       }
       h2{
